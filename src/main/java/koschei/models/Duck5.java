@@ -1,13 +1,12 @@
 package koschei.models;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
 public class Duck5 {
-    //// зависимость через поле ////
-    @Autowired
+    //// зависимость через конструктор ////
     private Egg6 egg;
+
+    public Duck5(Egg6 egg) {
+        this.egg = egg;
+    }
 
     @Override
     public String toString() {

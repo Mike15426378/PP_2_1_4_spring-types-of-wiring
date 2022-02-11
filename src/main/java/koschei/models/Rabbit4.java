@@ -5,13 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Rabbit4 {
-    //// зависимость через сеттер ////
-    private Duck5 duck;
-
+    //// зависимость через поле и аннот ////
     @Autowired
-    public void setDuck(Duck5 duck) {
-        this.duck = duck;
-    }
+    private Duck5 duck;
 
     @Override
     public String toString() {

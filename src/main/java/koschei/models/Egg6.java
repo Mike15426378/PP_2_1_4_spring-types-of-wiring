@@ -5,13 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Egg6 {
-    //// зависимость через конструктор ////
-    private Needle7 needle;
-
+    //// зависимость через поле ////
     @Autowired
-    public Egg6(Needle7 needle) {
-        this.needle = needle;
-    }
+    private Needle7 needle;
 
     @Override
     public String toString() {
